@@ -62,49 +62,45 @@
             <div class="card">
                 <div class="card-body">
   
-                                  <h6 class="card-title">Update Admin Profile</h6>
-  
-                                  <form class="forms-sample" method="POST" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
-                                    @csrf
-                                      
-                                      <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Username" value="{{ $profileData->name }}" name="name">
-                                      </div>
-                                      <div class="mb-3">
-                                          <label for="exampleInputUsername1" class="form-label">Username</label>
-                                          <input type="text" class="form-control" id="username" autocomplete="off" placeholder="Username" value="{{ $profileData->username }}" name="username">
-                                      </div>
-                                      
-                                      <div class="mb-3">
-                                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                          <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $profileData->email }}" name="email">
-                                      </div>
-                                      <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Your Address</label>
-                                        <input type="text" class="form-control" id="address" placeholder="Address" value="{{ $profileData->address }}" name="address">
-                                      </div>
-                                      <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Phone/Mobile Number</label>
-                                        <input type="number" class="form-control" id="phone" placeholder="Phone/Mobile" value="{{ $profileData->phone }}" name="phone">
-                                      </div>
-                                      <div class="mb-3">
-                                        <label for="exampleInputUsername1" class="form-label">Profile Image</label>
-                                        <input type="file" class="form-control" id="image" name="photo">                                        
-                                      </div>
+                    <h6 class="card-title">Update Admin Profile</h6>
 
-                                      <div class="mb-3">
-                                        <img id="showImage" class="wd-100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('images/admin_images/'.$profileData->photo) : url('images/no_image.jpg') }}" alt="profile"/>
-                                      </div>
+                    <form class="forms-sample" method="POST" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
+                      @csrf
+                        
+                        <div class="mb-3">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Username" value="{{ $profileData->name }}" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" autocomplete="off" placeholder="Username" value="{{ $profileData->username }}" name="username">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $profileData->email }}" name="email">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Your Address</label>
+                          <input type="text" class="form-control" id="address" placeholder="Address" value="{{ $profileData->address }}" name="address">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Phone/Mobile Number</label>
+                          <input type="number" class="form-control" id="phone" placeholder="Phone/Mobile" value="{{ $profileData->phone }}" name="phone">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Profile Image</label>
+                          <input type="file" class="form-control" id="image" name="photo">                                        
+                        </div>
 
-                                      <button type="submit" class="btn btn-primary mb-2">Save Changes</button>
-                                      
-                                      <div class="form-check mb-3">
-                                      
-                                      </div>
-                                      <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                      <button class="btn btn-secondary">Cancel</button>
-                                  </form>
+                        <div class="mb-3">
+                          <img id="showImage" class="wd-100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('images/admin_images/'.$profileData->photo) : url('images/no_image.jpg') }}" alt="profile"/>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mb-2">Save Changes</button>
+                        
+                                                  
+                    </form>
   
                 </div>
               </div>
